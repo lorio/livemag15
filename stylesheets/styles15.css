@@ -1,0 +1,392 @@
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
+  display: block;
+}
+
+audio, canvas, video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+[hidden] {
+  display: none;
+}
+
+html {
+  font-size: 100%;
+  background: #fff;
+  color: #000;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+html, button, input, select, textarea {
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+a:focus {
+  outline: thin dotted;
+}
+
+a:hover, a:active {
+  outline: 0;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin: 0.83em 0;
+}
+
+h3 {
+  font-size: 1.17em;
+  margin: 1em 0;
+}
+
+h4 {
+  font-size: 1em;
+  margin: 1.33em 0;
+}
+
+h5 {
+  font-size: 0.83em;
+  margin: 1.67em 0;
+}
+
+h6 {
+  font-size: 0.75em;
+  margin: 2.33em 0;
+}
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+b, strong {
+  font-weight: bold;
+}
+
+blockquote {
+  margin: 1em 40px;
+}
+
+dfn {
+  font-style: italic;
+}
+
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+p, pre {
+  margin: 1em 0;
+}
+
+
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+q {
+  quotes: none;
+}
+
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+dl, menu, ol, ul {
+  margin: 1em 0;
+}
+
+dd {
+  margin: 0 0 0 40px;
+}
+
+menu, ol, ul {
+  padding: 0 0 0 40px;
+}
+
+nav ul, nav ol {
+  list-style-image: none;
+}
+
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+figure {
+  margin: 0;
+}
+
+button[disabled], input[disabled] {
+  cursor: default;
+}
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+
+*, *:after, *:before {
+  box-sizing: border-box;
+  *behavior: url("../behaviors/box-sizing/boxsizing.php");
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+img:not(a) {
+  pointer-events: none;
+}
+meta {display: block;}
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+h1, h2, h3, h4, h5, h6, p, body, a, img, ul, ol, blockquote, pre {
+  margin: 0; padding: 0; border: 0;
+}
+body {
+  font-family: 'mr-eaves-modern', san-serif;
+  font-size: 18px;
+  line-height: 1.52;
+  /* background-color: #f8f8f8; */
+  background-color: #f9f9f9;
+  text-rendering: optimizeLegibility;
+}
+body, a {
+  color: #171717;
+}
+em, strong, cite {font-style: italic;}
+a:hover {
+  color: #ff8000;
+  text-decoration: underline;
+}
+
+p {
+  margin-bottom: 1.52em;
+}
+.content-wrap {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.site-header {
+  display: flex;
+  flex-flow: row no-wrap;
+  justify-content: space-around;
+  align-items: baseline;
+  background-color: #fa4542;
+  background-image: -webkit-linear-gradient(top, #fa4542, #f9f9f9);
+  background-image: linear-gradient(to bottom, #fa4542, #f9f9f9);
+  text-shadow: rgba(255, 255, 255, 0.5) 0 1px 0;
+  font-weight: bold;
+}
+.site-header .logo h1 {
+  display: flex;
+  font-family: "matrix-ii", serif;
+  /*font-weight: 700;*/
+  font-size: 1.8em;
+  /*text-shadow: rgba(255, 255, 255, 0.5) 0 1px 0;*/
+}
+.tagline {
+  display: flex;
+  font-family: "mr-eaves-modern", san-serif;
+  /*font-weight: bold;*/
+  font-size: 1.3em;
+}
+.subscribe a {
+  font-family: "mr-eaves-modern", san-serif;
+  display: flex;
+  align-self: baseline;
+  /*font-weight: bold;*/
+  font-size: 1.3em;
+  /*flex-basis: 70%;*/
+}
+
+/*header h2 {
+  font-family: "mr-eaves-modern", san-serif;
+  font-weight: bold;
+  font-size: 1.3em;
+  text-shadow: rgba(255, 255, 255, 0.5) 0 1px 0;
+  display:flex;
+  flex-basis:15%;
+}*/
+.header a, .header a:hover {
+  text-decoration: none;
+}
+header a:hover,
+header a:focus {
+  color: slategray;
+}
+/*header .btn.cta a {
+  display: flex;
+  align-self: baseline;
+  font-weight: 600;
+  flex-basis: 70%;
+}*/
+.main {
+  display:flex;
+  position: relative;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: 80%;
+  order: 2;
+  justify-content: flex-end;
+}
+.main header {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+.main header a {
+  color: #ef2774;
+  text-decoration: none;
+}
+.main header a:hover,
+.main header a:focus {
+  border-bottom: 3px dotted #ef2774;            
+}
+.main figure {
+  max-height: 80wh;
+  max-height: fit-content;
+  max-width: 100%;
+  max-width: fit-content;
+}
+.main img {
+  box-shadow: rgba(255, 255, 255, 0.8) 0 1px 0, inset rgba(0, 0, 0, 0.05) 0 1px 0;
+  pointer-events: none;
+}
+.main article {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+aside {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: 25%;
+  order: 1;
+}
+.pager {
+  display: flex;
+  margin: 20px;
+  padding-left: 0;
+  list-style: none;
+  text-align: center;
+  *zoom: 1;
+}
+
+.pager:before, .pager:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+
+.pager:after {
+  clear: both;
+}
+
+.pager li {
+  display: inline;
+  visibility: hidden;
+}
+
+.pager li > a, .pager li > span {
+  display: inline-block;
+  padding: 5px 14px;
+  color: #05c;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+}
+
+.pager li > a:visited, .pager li > span:visited {
+  color: #05c;
+}
+
+.pager li > a:focus, .pager li > span:focus {
+  color: #05c;
+}
+
+.pager li > a:hover, .pager li > span:hover {
+  color: #05c;
+}
+
+.pager li > a:active, .pager li > span:active {
+  color: #05c;
+}
+
+.pager li > a:hover, .pager li > a:focus {
+  text-decoration: none;
+  background-color: #f5f5f5;
+}
+
+.pager .next > a, .pager .next > span {
+  display: flex;
+  
+}
+
+.pager .previous > a, .pager .previous > span {
+ display: flex;
+}
+
+.pager .disabled > a, .pager .disabled > a:hover, .pager .disabled > a:focus, .pager .disabled > span {
+  color: #999999;
+  background-color: #fff;
+  cursor: default;
+}

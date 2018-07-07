@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html class="no-js" lang="EN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>LiveMag!14 | {{page.artist}}</title>
+    <meta name="description" content=" {{page.art}} by {{page.artist}} in LiVe MAG! Issue No.14.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='../../apple-touch-icon-144x144.png' rel='apple-touch-icon' sizes='144x144'>
+    <link href='../../apple-touch-icon-72x72.png' rel='apple-touch-icon' sizes='72x72'>
+    <link href='../../apple-touch-icon.png' rel='apple-touch-icon'>
+    <link href='../../favicon.ico' rel='icon' type='image/ico'>
+    <meta property="og:url" content="http://livemag.org/issue_14/" />
+    <meta property="og:title" content="LiveMag14! | {{page.artist}}" />
+    <meta property="og:description" content="{{page.art}} by {{page.artist}} in LiVE MAG! Issue No.14"/>
+    <meta property="og:image" content="http://livemag.org/images/no14/burckhardt.jpg"/>
+    <meta property="og:image:width" content="">
+    <meta property="og:image:height" content="">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@LiveMagNYC">
+    <meta name="twitter:title" content="LiveMag14! | {{page.artist}}">
+    <meta name="twitter:description" content="{{page.art}} by {{page.artist}} in LiVE MAG! Issue No.14.">
+    <meta name="twitter:image" content="http://livemag.org/images/no14/burckhardt.jpg">
+    <meta name="robots" content="index, follow">
+    <link rel="stylesheet" href="https://use.typekit.net/psl2mid.css">
+    <link rel="javascript" href="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js">
+    <link rel="javascript" href="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js">
+    <!-- <script src="../../javascripts/all.js" type="text/javascript"></script> -->
+    <link rel="stylesheet" href="../../stylesheets/styles.css">
+  </head>
+  <body> 
+    {% include header.html %}
+    <div class="content-wrap">
+      <section class="main">
+        <header>
+          <h3><a href="../index.html">14</a></h3>
+          <h3>{{page.artist}}</h3>
+        </header>
+        {% if page.art == "Art" %}
+        <figure>
+          <img src="../../images/no15/xxx.jpg" alt="" height="" width=""><figcaption><em>Untitled</em> 20 <br>Courtesy </figcaption> 
+        </figure>
+        {% elsif page.art == "Poem" %}
+        <article class=""></article>
+        {% endif %}
+        <article class="prose bio">
+          <p>
+            {{page.bio}}
+          </p>
+        </article>
+      </section><!-- end main -->
+      
+      <aside>
+        <ul class="contributors">
+          <li><a href="#"></a>artist</li>
+          <li><a href="#"></a>another</li>
+          <li><a href="#"></a>poet</li>
+          <li><a href="#"></a>poet</li>
+          <li><a href="#"></a>artist</li>
+        </ul>
+      </aside>
+  </div>  <!-- end content-wrap -->
+      {% include pager.html %}
+{% include footer.html %}
+    <script>
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='https://www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-49721284-2');ga('send','pageview');
+    </script>
+  </body>
+</html>

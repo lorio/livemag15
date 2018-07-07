@@ -1,0 +1,7 @@
+page_gen:
+  - data: artists
+    template: default
+    name: name
+    dir: issue_14
+    extension: html
+page_gen-dirs: true
