@@ -209,7 +209,7 @@ body {
   text-rendering: optimizeLegibility;
 }
 body, a {
-  color: #171717;
+  color: #1a1a1a;
 }
 em, strong, cite {font-style: italic;}
 a:hover {
@@ -222,6 +222,8 @@ p {
 }
 .container {
   height: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -238,9 +240,9 @@ p {
   flex-flow: row no-wrap;
   justify-content: space-around;
   align-items: baseline;
-  background-color: #fa4542;
-  background-image: -webkit-linear-gradient(top, #fa4542, #f9f9f9);
-  background-image: linear-gradient(to bottom, #fa4542, #f9f9f9);
+  background-color: #fff5ee;
+  background-image: -webkit-linear-gradient(top, #fff5ee, #f9f9f9);
+  background-image: linear-gradient(to bottom, #fff5ee, #f9f9f9);
   text-shadow: rgba(255, 255, 255, 0.5) 0 1px 0;
   font-weight: bold;
 }
@@ -268,27 +270,18 @@ p {
   /*flex-basis: 70%;*/
 }
 
-/*header h2 {
-  font-family: "mr-eaves-modern", san-serif;
-  font-weight: bold;
-  font-size: 1.3em;
-  text-shadow: rgba(255, 255, 255, 0.5) 0 1px 0;
-  display:flex;
-  flex-basis:15%;
-}*/
-.header a, .header a:hover {
+.site-header a {
+  color: #1a1a1a;
   text-decoration: none;
 }
-header a:hover,
-header a:focus {
+.site-header a:hover,
+.site-header a:focus {
   color: slategray;
 }
-/*header .btn.cta a {
-  display: flex;
-  align-self: baseline;
-  font-weight: 600;
-  flex-basis: 70%;
-}*/
+.subscribe a {
+  text-decoration: underline;
+}
+
 .main {
   display:flex;
   position: relative;
@@ -297,20 +290,27 @@ header a:focus {
   width: 80%;
   order: 2;
   justify-content: flex-end;
+  color: #1a1a1a;
+  border-top: 1px dashed #ddd;
+  margin-top: -1em;
+  /*border-top: 1px dashed slategray;*/
+
 }
-.main header h3{
-  /*text-align: center;*/
+.content-wrap header {
+  color: #1a1a1a;
   font-weight: bold;
   font-size: 1.8em;
-  padding: 1em 0;
+  padding-bottom: 1em;
 }
-.main header a {
-  color: #ef2774;
-  text-decoration: none;
+aside h2 a {
+  color: #1a1a1a;
+  font-family: 'matrix-ii', serif;
+  text-decoration: underline;    
 }
-.main header a:hover,
-.main header a:focus {
-  border-bottom: 3px dotted #ef2774;            
+aside h2 a:focus,
+aside h2 a:hover {
+  color: slategray;
+     
 }
 .main figure {
   max-height: 80wh;
@@ -334,7 +334,7 @@ aside {
   width: 25%;
  /* order: 1;*/
 }
-aside h2 a {
+.contributors h2 a {
   padding: 1em;
   line-height: 1.5em;
   font-size: 1.8;
@@ -353,6 +353,7 @@ ul.contributors {
 ul.contributors li {
   margin-left: -8px;
 }
+/*********pager***********/
 .pager {
   display: flex;
   margin: 20px;
@@ -441,9 +442,9 @@ footer h3 {
   font-size: 1.2em;
   text-transform: lowercase;
 }
-aside h2 a,
+
 .footer-nav a,
-.contributors a {
+ul.contributors a {
   color: #1a1a1a;
   text-decoration: none; 
   font-weight: bold;
@@ -454,7 +455,7 @@ aside h2 a:focus,
 .contributors a:focus,
 .footer-nav a:focus,
 .footer-nav a:hover {
-  color: #ef2774;
+  color: slategray;
 }
 
 .site-footer {
@@ -464,8 +465,7 @@ aside h2 a:focus,
   align-content: flex-end;
   width: 100%;
   position: relative;
-  margin-top: 1em;
-  padding: 1em;
+  padding: 0 1em 1em;
   background-color: #f9f9f9;
   color: #1a1a1a;
 }
