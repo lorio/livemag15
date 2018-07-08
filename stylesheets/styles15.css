@@ -390,3 +390,36 @@ aside {
   background-color: #fff;
   cursor: default;
 }
+.footer-nav {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.footer-nav a {
+  color: #1a1a1a;
+  text-decoration: none;
+}
+
+.footer-nav a:hover {
+  color: #ef2774;
+}
+
+.site-footer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  margin-top: 1em;
+  padding: 1em;
+  height: 4em;
+  clear: both;
+  background-color: #f9f9f9;
+  color: #1a1a1a;
+  /*text-align: center;*/
+}
+
+/*footer h5 {
+  text-align: center;
+  margin: 0;
+}*/
