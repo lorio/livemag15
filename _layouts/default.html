@@ -3,24 +3,24 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>LiveMag!14 | {{page.artist}}</title>
-    <meta name="description" content=" {{page.art}} by {{page.artist}} in LiVe MAG! Issue No.14.">
+    <title>LiveMag!15 | {{page.artist}}</title>
+    <meta name="description" content=" {{page.art}} by {{page.artist}} in LiVe MAG! Issue No.15.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href='../../apple-touch-icon-144x144.png' rel='apple-touch-icon' sizes='144x144'>
     <link href='../../apple-touch-icon-72x72.png' rel='apple-touch-icon' sizes='72x72'>
     <link href='../../apple-touch-icon.png' rel='apple-touch-icon'>
     <link href='../../favicon.ico' rel='icon' type='image/ico'>
     <meta property="og:url" content="http://livemag.org/issue_14/" />
-    <meta property="og:title" content="LiveMag14! | {{page.artist}}" />
-    <meta property="og:description" content="{{page.art}} by {{page.artist}} in LiVE MAG! Issue No.14"/>
+    <meta property="og:title" content="LiveMag15! | {{page.artist}}" />
+    <meta property="og:description" content="{{page.art}} by {{page.artist}} in LiVE MAG! Issue No.15"/>
     <meta property="og:image" content="http://livemag.org/images/no14/burckhardt.jpg"/>
-    <meta property="og:image:width" content="">
-    <meta property="og:image:height" content="">
+    <!-- <meta property="og:image:width" content="">
+    <meta property="og:image:height" content=""> -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@LiveMagNYC">
     <meta name="twitter:title" content="LiveMag14! | {{page.artist}}">
     <meta name="twitter:description" content="{{page.art}} by {{page.artist}} in LiVE MAG! Issue No.14.">
-    <meta name="twitter:image" content="http://livemag.org/images/no14/burckhardt.jpg">
+    <meta name="twitter:image" content="http://livemag.org/images/no15/{{page.image}}">
     <meta name="robots" content="index, follow">
     <link rel="stylesheet" href="https://use.typekit.net/psl2mid.css">
     <link rel="javascript" href="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js">
@@ -33,14 +33,7 @@
       {% include header.html %}
       <div class="content-wrap">
         <aside>
-          <h3><a href="../index.html">14</a></h3>
-          <ul class="contributors">
-            <li><a href="#"></a>artist</li>
-            <li><a href="#"></a>another</li>
-            <li><a href="#"></a>poet</li>
-            <li><a href="#"></a>poet</li>
-            <li><a href="#"></a>artist</li>
-          </ul>
+          {% include contributors.html %}
         </aside>
         <section class="main">
           <header>          
