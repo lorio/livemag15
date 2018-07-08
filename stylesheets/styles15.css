@@ -199,6 +199,8 @@ h1, h2, h3, h4, h5, h6, p, body, a, img, ul, ol, blockquote, pre {
   margin: 0; padding: 0; border: 0;
 }
 body {
+  height: 100%;
+  width: 100%;
   font-family: 'mr-eaves-modern', san-serif;
   font-size: 18px;
   line-height: 1.52;
@@ -218,6 +220,13 @@ a:hover {
 p {
   margin-bottom: 1.52em;
 }
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+}
 .content-wrap {
   display: flex;
   width: 80%;
@@ -235,12 +244,14 @@ p {
   text-shadow: rgba(255, 255, 255, 0.5) 0 1px 0;
   font-weight: bold;
 }
-.site-header .logo h1 {
+.site-header .logo h1 a {
   display: flex;
   font-family: "matrix-ii", serif;
-  /*font-weight: 700;*/
-  font-size: 1.8em;
-  /*text-shadow: rgba(255, 255, 255, 0.5) 0 1px 0;*/
+  text-decoration: none;
+  font-size: 1.3em;
+  text-shadow: rgba(255, 255, 255, 0.5) 0 1px 0;
+  line-height: 1em;
+  padding-top: 0.5em;
 }
 .tagline {
   display: flex;
@@ -291,6 +302,7 @@ header a:focus {
   text-align: center;
   font-weight: bold;
   font-size: 1.5em;
+  padding: 1em;
 }
 .main header a {
   color: #ef2774;
@@ -320,7 +332,7 @@ aside {
   flex-direction: column;
   flex-wrap: nowrap;
   width: 25%;
-  order: 1;
+ /* order: 1;*/
 }
 .pager {
   display: flex;
@@ -390,15 +402,31 @@ aside {
   background-color: #fff;
   cursor: default;
 }
-.footer-nav {
-  display: flex;
-  width: 100%;
-  justify-content: center;
+footer .copy,
+footer h3 {
+  text-align: center;
+  padding: 1em;
 }
-
+.footer-nav ul {
+  display: inline-flex;
+  flex-direction: row;
+  width: 100%;
+  list-style-type: none;
+  justify-content: space-around;
+  flex-basis: 2;
+}
+.footer-nav li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: 1.2em;
+  text-transform: lowercase;
+}
 .footer-nav a {
   color: #1a1a1a;
   text-decoration: none;
+  
+  font-weight: bold;
 }
 
 .footer-nav a:hover {
@@ -407,19 +435,14 @@ aside {
 
 .site-footer {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-self: flex-end;
+  align-content: flex-end;
   width: 100%;
   position: relative;
   margin-top: 1em;
   padding: 1em;
-  height: 4em;
-  clear: both;
   background-color: #f9f9f9;
   color: #1a1a1a;
-  /*text-align: center;*/
 }
 
-/*footer h5 {
-  text-align: center;
-  margin: 0;
-}*/
