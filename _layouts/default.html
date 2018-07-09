@@ -18,8 +18,8 @@
     <meta property="og:image:height" content=""> -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@LiveMagNYC">
-    <meta name="twitter:title" content="LiveMag14! | {{page.artist}}">
-    <meta name="twitter:description" content="{{page.art}} by {{page.artist}} in LiVE MAG! Issue No.14.">
+    <meta name="twitter:title" content="LiveMag15! | {{page.artist}}">
+    <meta name="twitter:description" content="{{page.art}} by {{page.artist}} in LiVE MAG! Issue No.15.">
     <meta name="twitter:image" content="http://livemag.org/images/no15/{{page.image}}">
     <meta name="robots" content="index, follow">
     <link rel="stylesheet" href="https://use.typekit.net/psl2mid.css">
@@ -37,7 +37,7 @@
         </aside>
         <section class="main">
           <header>          
-            <h3>{{page.artist}}</h3>
+            <h2>{{page.artist}}</h2>
           </header>
           {% if page.art == "Art" %}
           <figure>
@@ -56,6 +56,20 @@
        <!--  {% include pager.html %} -->
   {% include footer.html %}
     </div><!-- end container -->
+    <script>
+       /* Open the drawer when the menu ison is clicked.*/
+      var menu = document.querySelector('#menu');
+      var main = document.querySelector('.content-wrap');
+      var drawer = document.querySelector('.side-nav');
+
+      menu.addEventListener('click', function(e) {
+        drawer.classList.toggle('open');
+        e.stopPropagation();
+      });
+      main.addEventListener('click', function() {
+        drawer.classList.remove('open');
+      });
+    </script>
     <script>
       (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
       function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
