@@ -1,3 +1,7 @@
+---
+---
+
+
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
   display: block;
 }
@@ -204,14 +208,11 @@ body {
   font-family: 'mr-eaves-modern', san-serif;
   font-size: 18px;
   line-height: 1.52;
-  /* background-color: #f8f8f8; */
-  background-color: #f9f9f9;
-  background-image: -webkit-linear-gradient(top, #fff5ee, #f9f9f9);
-  background-image: linear-gradient(to bottom, #fff5ee, #f9f9f9);
+  background-color: rgba(255,64,255,0.05); 
   text-rendering: optimizeLegibility;
 }
 body, a {
-  color: #1a1a1a;
+  color: #01003b;
 }
 em, strong, cite {font-style: italic;}
 a:hover {
@@ -219,14 +220,24 @@ a:hover {
   text-decoration: underline;
 }
 
-p {
+.article p,
+.bio p {
   margin-bottom: 1.52em;
+  font-size: 1.1em;
 }
+.bio p {
+  color: rgba(1,0,59,0.5);
+}
+
 .container {
   height: 100%;
+  min-height:100vh;
   max-width: 1200px;
   margin: 0 auto;
   width: 100%;
+  border: 5px solid rgba(255,64,255,0.1);
+  /*border-bottom: 10px solid rgba(255,64,255,0.05);*/
+  background-color: #fefefe;
   display: flex;
   flex-direction: column;
   justify-content: stretch;
@@ -249,16 +260,32 @@ p {
   display: flex;
   font-family: "matrix-ii", serif;
   text-decoration: none;
+  background-color: rgba(255,64,255,0.05);
+  border-radius: 50%;
   font-size: 1.3em;
   text-shadow: rgba(255, 255, 255, 0.5) 0 1px 0;
   line-height: 1em;
-  padding-top: 0.5em;
+  color: #01003b;
+  padding: 0;
+ /* padding-top: 0.5em;*/
+  
+  /*border: 5px solid rgba(255,64,255,0.05)*/
 }
+.site-header .logo h1 a:hover,
+.site-header .logo h1 a:focus,
+.site-header .logo h1 a:active {
+  color: slategray;
+  position:relative;top:1px;left:1px;
+}
+/*.logo {*/
+  /*border-left: 2px solid rgba(255, 64, 255, 0.2);
+  border-radius: 0 0 10px 0;
+}*/
 .tagline {
   display: flex;
   font-family: "mr-eaves-modern", san-serif;
-  /*font-weight: bold;*/
-  font-size: 1.3em;
+  padding-right: 4em;
+  font-size: 1.14em;
 }
 .subscribe a {
   font-family: "mr-eaves-modern", san-serif;
@@ -270,12 +297,14 @@ p {
 }
 
 .site-header a {
-  color: #1a1a1a;
+  color: #01003b;
   text-decoration: none;
 }
 .site-header a:hover,
-.site-header a:focus {
+.site-header a:focus,
+.site-header a:active {
   color: slategray;
+  position:relative;top:1px;left:1px;
 }
 .subscribe a {
   text-decoration: underline;
@@ -289,25 +318,26 @@ p {
   width: 80%;
   order: 2;
   justify-content: flex-end;
-  color: #1a1a1a;
+  color: #01003b;
   border-top: 1px dashed #ddd;
   margin-top: -1em;
   /*border-top: 1px dashed slategray;*/
 
 }
 .content-wrap header {
-  color: #1a1a1a;
+  color: #01003b;
   font-weight: bold;
   font-size: 1.6em;
   padding-bottom: 1em;
 }
 aside h2 a {
-  color: #1a1a1a;
+  color: #01003b;
   font-family: 'matrix-ii', serif;
   text-decoration: underline;    
 }
+aside h2 a:hover,
 aside h2 a:focus,
-aside h2 a:hover {
+aside h2 a:active {
   color: slategray;
      
 }
@@ -325,6 +355,13 @@ aside h2 a:hover {
   position: relative;
   display: flex;
   flex-wrap: wrap;
+}
+.prose {
+  /*width: 48em;*/
+  /*text-align: left;*/
+}
+.indent {
+  text-indent: 5em;
 }
 aside {
   display: flex;
@@ -353,7 +390,7 @@ ul.contributors li {
   margin-left: -8px;
 }
 /*********pager***********/
-.pager {
+/* .pager {
   display: flex;
   margin: 20px;
   padding-left: 0;
@@ -420,10 +457,43 @@ ul.contributors li {
   color: #999999;
   background-color: #fff;
   cursor: default;
+} */
+footer.site-footer {
+  display: flex;
+  flex-direction: column;
 }
-footer .copy,
-footer h3 {
+.site-footer header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.site-footer .subscribe {
+  display: flex;
+  order: 3;
+  flex-grow: 2;
+}
+.site-footer .subscribe a {
+  text-decoration: underline;
+}
+footer.site-footer .copy {
   text-align: center;
+  padding: 1em;
+}
+footer h3 {
+  display: flex;
+  flex-grow: 3;
+  padding: 1em;
+  order: 2;
+  font-size: 1.3em;
+}
+footer.site-footer header .social {
+  display:flex;
+  order: 1;
+  flex-grow: 2;
+}
+.social a {
+  width: 70px;
   padding: 1em;
 }
 .footer-nav ul {
@@ -444,17 +514,28 @@ footer h3 {
 
 .footer-nav a,
 ul.contributors a {
-  color: #1a1a1a;
+  color: #01003b;
   text-decoration: none; 
   font-weight: bold;
 }
 aside h2 a:hover,
 aside h2 a:focus,
+aside h2 a:active,
 .contributors a:hover,
 .contributors a:focus,
+.contributors a:active,
+.footer-nav a:hover,
 .footer-nav a:focus,
-.footer-nav a:hover {
+.footer-nav a:active {
   color: slategray;
+  position:relative;top:1px;left:1px;
+}
+.bio {
+  margin-top: 1em;
+  border-top: 1px dashed #ddd;
+}
+.bio p {
+  padding-top: 1em;
 }
 
 .site-footer {
@@ -465,24 +546,24 @@ aside h2 a:focus,
   width: 100%;
   position: relative;
   padding: 0 1em 1em;
-  background-color: #f9f9f9;
-  color: #1a1a1a;
+  background-color: #fefefe;
+  color: #01003b;
 }
 @media screen and (max-width: 549px) {
   .header__menu svg {
     width: 32px;
-    fill: #1a1a1a;
+    fill: #01003b;
   }
   .tagline { display: none; }
   .side-nav {
     z-index: 10;
-    background-color: seashell;
+    background-color: #fefefe;
     width: 300px;
     position: absolute;
     /* This trasform moves the drawer off canvas. */
     -webkit-transform: translate(-300px, 0);
     transform: translate(-300px, 0);
-    /* Optionally, we animate the drawer. */
+    /* Optionally, we animate the drawer. */   
     transition: transform 0.3s ease;
     }
     .side-nav.open {
@@ -491,6 +572,14 @@ aside h2 a:focus,
     }
     .content-wrap header {
       padding-top: 1em;
+    }
+    .main {
+      width: 100%;
+    }
+  }
+  @media screen and (max-width: 320px) {
+    footer .social {
+      flex-direction: column;
     }
   }
   @media screen and (min-width: 550px) {
