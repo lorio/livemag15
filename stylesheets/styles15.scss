@@ -80,7 +80,7 @@ abbr[title] {
 }
 
 b, strong {
-  font-weight: bold;
+  font-weight: 700;
 }
 
 blockquote {
@@ -98,8 +98,13 @@ mark {
 
 p, pre {
   margin: 1em 0;
+  font-size: 1.25rem;
 }
-
+em {
+  font-style: italic;
+  font-family: 'mr-eaves-modern', san-serif;
+  letter-spacing: 0.02em;
+}
 
 pre {
   white-space: pre;
@@ -147,9 +152,9 @@ dd {
   margin: 0 0 0 40px;
 }
 
-menu, ol, ul {
+/* menu, ol, ul {
   padding: 0 0 0 40px;
-}
+} */
 
 nav ul, nav ol {
   list-style-image: none;
@@ -199,9 +204,9 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
-h1, h2, h3, h4, h5, h6, p, body, a, img, ul, ol, blockquote, pre {
+/* h1, h2, h3, h4, h5, h6, p, body, a, img, ul, ol, blockquote, pre {
   margin: 0; padding: 0; border: 0;
-}
+} */
 body {
   height: 100%;
   width: 100%;
@@ -213,20 +218,6 @@ body {
 }
 body, a {
   color: #01003b;
-}
-em, strong, cite {font-style: italic;}
-a:hover {
-  color: #ff8000;
-  text-decoration: underline;
-}
-
-.article p,
-.bio p {
-  margin-bottom: 1.52em;
-  font-size: 1.1em;
-}
-.bio p {
-  color: rgba(1,0,59,0.5);
 }
 
 .container {
@@ -260,16 +251,18 @@ a:hover {
   display: flex;
   font-family: "matrix-ii", serif;
   text-decoration: none;
-  background-color: rgba(255,64,255,0.05);
+   
+   background-color: #e0e0e0 ;
+  /* background-color: rgba(229,71,120,.2); */
+  /* background-color:rgba(255,64,255,0.5) */
+  /* border: 10px solid rgb(182,225,246); */
+  border: 10px dashed #fefefe;
   border-radius: 50%;
-  font-size: 1.3em;
+  font-size: 1.1em;
   text-shadow: rgba(255, 255, 255, 0.5) 0 1px 0;
-  line-height: 1em;
+  line-height: 0.8em;
   color: #01003b;
-  padding: 0;
- /* padding-top: 0.5em;*/
-  
-  /*border: 5px solid rgba(255,64,255,0.05)*/
+  padding: 0.3em 0;
 }
 .site-header .logo h1 a:hover,
 .site-header .logo h1 a:focus,
@@ -328,7 +321,7 @@ a:hover {
   color: #01003b;
   font-weight: bold;
   font-size: 1.6em;
-  padding-bottom: 1em;
+/*   padding-bottom: 1em; */
 }
 aside h2 a {
   color: #01003b;
@@ -351,17 +344,37 @@ aside h2 a:active {
   box-shadow: rgba(255, 255, 255, 0.8) 0 1px 0, inset rgba(0, 0, 0, 0.05) 0 1px 0;
   pointer-events: none;
 }
-.main article {
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
+.main header,
+.main header h3,
+.main header h2,
+.article header h3 {
+  margin-bottom: 0;
 }
-.prose {
-  /*width: 48em;*/
-  /*text-align: left;*/
+.main h3 {
+  font-size: 1.3em;
+  font-family: 'mr-eaves-modern', san-serif;
+  font-weight: 700;
+  margin-bottom: 0;
 }
+.bio p {
+  color: rgba(1,0,59,0.5);
+  font-size: 1.1em;
+}
+.prose p {
+  max-width: 36em;
+}
+.prose h3,
+.poem h3 {
+  margin-bottom: 0;
+}
+
+.prose p,
+.poem p {
+  margin-top:0;
+}
+
 .indent {
-  text-indent: 5em;
+  text-indent: 2em;
 }
 aside {
   display: flex;
@@ -385,79 +398,13 @@ ul.contributors {
   list-style-type: none;
   font-size: 1.2em;
   margin-top: 1em;
+  padding-left: 0;
 }
 ul.contributors li {
   margin-left: -8px;
+  padding: .5em 0 .5em;
 }
-/*********pager***********/
-/* .pager {
-  display: flex;
-  margin: 20px;
-  padding-left: 0;
-  list-style: none;
-  text-align: center;
-  *zoom: 1;
-}
-
-.pager:before, .pager:after {
-  display: table;
-  content: "";
-  line-height: 0;
-}
-
-.pager:after {
-  clear: both;
-}
-
-.pager li {
-  display: inline;
-  visibility: hidden;
-}
-
-.pager li > a, .pager li > span {
-  display: inline-block;
-  padding: 5px 14px;
-  color: #05c;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 15px;
-}
-
-.pager li > a:visited, .pager li > span:visited {
-  color: #05c;
-}
-
-.pager li > a:focus, .pager li > span:focus {
-  color: #05c;
-}
-
-.pager li > a:hover, .pager li > span:hover {
-  color: #05c;
-}
-
-.pager li > a:active, .pager li > span:active {
-  color: #05c;
-}
-
-.pager li > a:hover, .pager li > a:focus {
-  text-decoration: none;
-  background-color: #f5f5f5;
-}
-
-.pager .next > a, .pager .next > span {
-  display: flex;
-  
-}
-
-.pager .previous > a, .pager .previous > span {
- display: flex;
-}
-
-.pager .disabled > a, .pager .disabled > a:hover, .pager .disabled > a:focus, .pager .disabled > span {
-  color: #999999;
-  background-color: #fff;
-  cursor: default;
-} */
+/*********** footer********* */
 footer.site-footer {
   display: flex;
   flex-direction: column;
@@ -536,6 +483,7 @@ aside h2 a:active,
 }
 .bio p {
   padding-top: 1em;
+  max-width: 36em;
 }
 
 .site-footer {
@@ -583,6 +531,9 @@ aside h2 a:active,
     }
   }
   @media screen and (min-width: 550px) {
+    .site-header {
+      margin-bottom: -2em;
+    }
     .side-nav {
       margin-left: -34px;
     }
@@ -590,5 +541,11 @@ aside h2 a:active,
   @media screen and (min-width: 889px) {
     .side-nav {
       margin-left: -24px;
+    }
+    footer.site-footer header .social {
+      display:flex;
+      order: 1;
+      flex-grow: 5;
+      padding-left: 2.5em;
     }
   }
