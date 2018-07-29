@@ -250,12 +250,8 @@ body, a {
 .site-header .logo h1 a {
   display: flex;
   font-family: "matrix-ii", serif;
-  text-decoration: none;
-   
-   background-color: #e0e0e0 ;
-  /* background-color: rgba(229,71,120,.2); */
-  /* background-color:rgba(255,64,255,0.5) */
-  /* border: 10px solid rgb(182,225,246); */
+  text-decoration: none;   
+  background-color: #e0e0e0 ;
   border: 10px dashed #fefefe;
   border-radius: 50%;
   font-size: 1.1em;
@@ -308,20 +304,16 @@ body, a {
   position: relative;
   flex-direction: column;
   flex-wrap: nowrap;
-  width: 80%;
   order: 2;
-  justify-content: flex-end;
   color: #01003b;
   border-top: 1px dashed #ddd;
   margin-top: -1em;
-  /*border-top: 1px dashed slategray;*/
-
 }
 .content-wrap header {
   color: #01003b;
   font-weight: bold;
   font-size: 1.6em;
-/*   padding-bottom: 1em; */
+  text-align: center;
 }
 aside h2 a {
   color: #01003b;
@@ -335,12 +327,20 @@ aside h2 a:active {
      
 }
 .main figure {
-  max-height: 80wh;
-  max-height: fit-content;
-  max-width: 100%;
-  max-width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  margin-top: .5em;
+}
+.main figure figcaption {
+  display: flex;
+  justify-content: center;
+}
+article.poem {
+  margin: 0 auto;
 }
 .main img {
+  display: flex;
   box-shadow: rgba(255, 255, 255, 0.8) 0 1px 0, inset rgba(0, 0, 0, 0.05) 0 1px 0;
   pointer-events: none;
 }
@@ -367,7 +367,7 @@ aside h2 a:active {
 .poem h3 {
   margin-bottom: 0;
 }
-
+pre,
 .prose p,
 .poem p {
   margin-top:0;
@@ -380,12 +380,12 @@ aside {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  width: 25%;
+  flex: 0 0 12em;
  /* order: 1;*/
 }
 .contributors h2 a {
   padding: 1em;
-  line-height: 1.5em;
+  line-height: 1.3em;
   font-size: 1.8;
   font-family: 'matrix-ii', serif;
   text-decoration: none;
@@ -400,9 +400,25 @@ ul.contributors {
   margin-top: 1em;
   padding-left: 0;
 }
+
 ul.contributors li {
   margin-left: -8px;
-  padding: .5em 0 .5em;
+  padding: .5em 0 0;
+}
+ul.contributors a {
+  color: rgba(1,0,59,0.5);
+  text-decoration: none; 
+  font-weight: bold;
+  padding: .5em;
+}
+.contributors a:hover,
+.contributors a:focus,
+.contributors a:active {
+  color: #01003b;
+  position:relative;top:1px;left:1px;
+}
+.contributors .selected a {
+  color: #01003b;
 }
 /*********** footer********* */
 footer.site-footer {
@@ -459,8 +475,7 @@ footer.site-footer header .social {
   text-transform: lowercase;
 }
 
-.footer-nav a,
-ul.contributors a {
+.footer-nav a {
   color: #01003b;
   text-decoration: none; 
   font-weight: bold;
@@ -468,9 +483,6 @@ ul.contributors a {
 aside h2 a:hover,
 aside h2 a:focus,
 aside h2 a:active,
-.contributors a:hover,
-.contributors a:focus,
-.contributors a:active,
 .footer-nav a:hover,
 .footer-nav a:focus,
 .footer-nav a:active {
@@ -497,7 +509,7 @@ aside h2 a:active,
   background-color: #fefefe;
   color: #01003b;
 }
-@media screen and (max-width: 549px) {
+@media screen and (max-width: 569px) {
   .header__menu svg {
     width: 32px;
     fill: #01003b;
@@ -522,7 +534,7 @@ aside h2 a:active,
       padding-top: 1em;
     }
     .main {
-      width: 100%;
+      flex: 1 0 100%;
     }
   }
   @media screen and (max-width: 320px) {
@@ -530,12 +542,15 @@ aside h2 a:active,
       flex-direction: column;
     }
   }
-  @media screen and (min-width: 550px) {
+  @media screen and (min-width: 570px) {
     .site-header {
       margin-bottom: -2em;
     }
     .side-nav {
       margin-left: -34px;
+    }
+    ul.contributors {
+      overflow-y: auto;
     }
   }
   @media screen and (min-width: 889px) {

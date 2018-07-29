@@ -10,10 +10,10 @@
     <link href='../../apple-touch-icon-72x72.png' rel='apple-touch-icon' sizes='72x72'>
     <link href='../../apple-touch-icon.png' rel='apple-touch-icon'>
     <link href='../../favicon.ico' rel='icon' type='image/ico'>
-    <meta property="og:url" content="http://livemag.org/issue_15/" />
+    <meta property="og:url" content="http://livemag.org{{page.url}}" />
     <meta property="og:title" content="LiveMag15! | {{page.artist}}" />
     <meta property="og:description" content="{{page.art}} by {{page.artist}} in LiVE MAG! Issue No.15"/>
-    <meta property="og:image" content="http://livemag.org/images/bunny.jpg"/>
+    <meta property="og:image" content="http://livemag.org/images/{{page.image}}"/>
     <!-- <meta property="og:image:width" content="">
     <meta property="og:image:height" content=""> -->
     <meta name="twitter:card" content="summary_large_image">
@@ -22,8 +22,10 @@
     <meta name="twitter:description" content="{{page.art}} by {{page.artist}} in LiVE MAG! Issue No.15.">
     <meta name="twitter:image" content="http://livemag.org/images/no15/{{page.image}}">
     <meta name="robots" content="index, follow">
+    <!--[if lt IE 9]>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+    <![endif]-->
     <link rel="stylesheet" href="https://use.typekit.net/psl2mid.css">
-    <link rel="javascript" href="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js">
     <link rel="stylesheet" href="../../stylesheets/styles15.css">
   </head>
   <body>
@@ -43,8 +45,10 @@
           </figure>
           {% elsif page.art == "Poetry" %}
           <article class="poem"></article>
+            <h3>{{page.title}}</h3>
           {% elsif page.art == "Prose" %}
           <article class="prose"></article>
+            <h3>{{page.title}}</h3>
           {% endif %}
           <article class="prose bio">
             <p>
@@ -53,8 +57,7 @@
           </article>
         </section><!-- end main -->
       </div><!-- end content-wrap -->
-       <!--  {% include pager.html %} -->
-  {% include footer.html %}
+{% include footer.html %}
     </div><!-- end container -->
     <script>
        /* Open the drawer when the menu ison is clicked.*/
