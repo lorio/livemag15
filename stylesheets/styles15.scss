@@ -1,7 +1,6 @@
 ---
 ---
 
-
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
   display: block;
 }
@@ -111,11 +110,11 @@ pre {
   white-space: pre-wrap;
   word-wrap: break-word;
 }
-
+/* 
 q {
   quotes: "\201C" "\201D" "\2018" "\2019";
 }
-
+ */
 q {
   quotes: none;
 }
@@ -151,10 +150,6 @@ dl, menu, ol, ul {
 dd {
   margin: 0 0 0 40px;
 }
-
-/* menu, ol, ul {
-  padding: 0 0 0 40px;
-} */
 
 nav ul, nav ol {
   list-style-image: none;
@@ -200,13 +195,6 @@ meta {display: block;}
 html {
   box-sizing: border-box;
 }
-
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-/* h1, h2, h3, h4, h5, h6, p, body, a, img, ul, ol, blockquote, pre {
-  margin: 0; padding: 0; border: 0;
-} */
 body {
   height: 100%;
   width: 100%;
@@ -280,9 +268,8 @@ body, a {
   font-family: "mr-eaves-modern", san-serif;
   display: flex;
   align-self: baseline;
-  /*font-weight: bold;*/
+  text-decoration: underline;
   font-size: 1.3em;
-  /*flex-basis: 70%;*/
 }
 
 .site-header a {
@@ -295,10 +282,6 @@ body, a {
   color: slategray;
   position:relative;top:1px;left:1px;
 }
-.subscribe a {
-  text-decoration: underline;
-}
-
 .main {
   display:flex;
   position: relative;
@@ -356,10 +339,7 @@ article.poem {
   font-weight: 700;
   margin-bottom: 0;
 }
-.bio p {
-  color: rgba(1,0,59,0.5);
-  font-size: 1.1em;
-}
+
 .prose p {
   max-width: 36em;
 }
@@ -381,7 +361,7 @@ aside {
   flex-direction: column;
   flex-wrap: nowrap;
   flex: 0 0 12em;
- /* order: 1;*/
+ 
 }
 .contributors h2 a {
   padding: 1em;
@@ -399,10 +379,11 @@ ul.contributors {
   font-size: 1.2em;
   margin-top: 1em;
   padding-left: 0;
+  margin-left: -1em;
 }
 
 ul.contributors li {
-  margin-left: -8px;
+ /*  margin-left: -8px; */
   padding: .5em 0 0;
 }
 ul.contributors a {
@@ -494,6 +475,8 @@ aside h2 a:active,
   border-top: 1px dashed #ddd;
 }
 .bio p {
+  color: rgba(1,0,59,0.5);
+  font-size: 1.1em;
   padding-top: 1em;
   max-width: 36em;
 }
@@ -524,7 +507,7 @@ aside h2 a:active,
     -webkit-transform: translate(-300px, 0);
     transform: translate(-300px, 0);
     /* Optionally, we animate the drawer. */   
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, -webkit-transform 0.3s ease;
     }
     .side-nav.open {
       -webkit-transform: translate(0, 0);
@@ -535,6 +518,9 @@ aside h2 a:active,
     }
     .main {
       flex: 1 0 100%;
+    }
+    aside {
+      flex: 0 0 .1px;
     }
   }
   @media screen and (max-width: 320px) {
@@ -555,7 +541,7 @@ aside h2 a:active,
   }
   @media screen and (min-width: 889px) {
     .side-nav {
-      margin-left: -24px;
+      margin-left: -28px;
     }
     footer.site-footer header .social {
       display:flex;
