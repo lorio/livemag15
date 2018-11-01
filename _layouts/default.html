@@ -44,11 +44,13 @@
             <img src="../../images/no15/{{page.image}}" alt=""><figcaption>{{page.title}}</figcaption> 
           </figure>
           {% elsif page.art == "Poetry" %}
-          <article class="poem"></article>
+          <article class="poem">
             <h3>{{page.title}}</h3>
+          </article>
           {% elsif page.art == "Prose" %}
-          <article class="prose"></article>
+          <article class="prose">
             <h3>{{page.title}}</h3>
+          </article>
           {% endif %}
           <article class="prose bio">
             <p>
