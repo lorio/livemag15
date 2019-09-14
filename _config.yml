@@ -2,7 +2,7 @@ page_gen:
   - data: artists
     template: default
     name: name
-    dir: issue_15
+    dir: issue_16
     extension: html
 page_gen-dirs: true
 
