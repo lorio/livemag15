@@ -3,24 +3,24 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>LiveMag!16 | {{page.artist}}</title>
-    <meta name="description" content=" {{page.art}} by {{page.artist}} in LiVe MAG! Issue No.16.">
+    <title>LiveMag!18 | {{page.artist}}</title>
+    <meta name="description" content=" {{page.art}} by {{page.artist}} in LiVe MAG! Issue No.18.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href='../../apple-touch-icon-144x144.png' rel='apple-touch-icon' sizes='144x144'>
     <link href='../../apple-touch-icon-72x72.png' rel='apple-touch-icon' sizes='72x72'>
     <link href='../../apple-touch-icon.png' rel='apple-touch-icon'>
     <link href='../../favicon.ico' rel='icon' type='image/ico'>
-    <meta property="og:url" content="https://livemag.org/{{page.url}}" />
-    <meta property="og:title" content="LiveMag16! | {{page.artist}}" />
-    <meta property="og:description" content="{{page.art}} by {{page.artist}} in LiVE MAG! Issue No.16"/>
-    <meta property="og:image" content="https://livemag.org/images/no16/{{page.image}}"/>
+    <meta property="og:url" content="https://livemag.org{{page.url}}" />
+    <meta property="og:title" content="LiveMag18! | {{page.artist}}" />
+    <meta property="og:description" content="{{page.art}} by {{page.artist}} in LiVE MAG! Issue No.18"/>
+    <meta property="og:image" content="https://livemag.org/images/no18/{{page.image}}"/>
     <meta property="og:image:width" content="530">
     <meta property="og:image:height" content="700">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@LiveMagNYC">
-    <meta name="twitter:title" content="LiveMag16! | {{page.artist}}">
-    <meta name="twitter:description" content="{{page.art}} by {{page.artist}} in LiVE MAG! Issue No.16.">
-    <meta name="twitter:image" content="https://livemag.org/images/no16/{{page.image}}">
+    <meta name="twitter:title" content="LiveMag18! | {{page.artist}}">
+    <meta name="twitter:description" content="{{page.art}} by {{page.artist}} in LiVE MAG! Issue No.18.">
+    <meta name="twitter:image" content="https://livemag.org/images/no18/{{page.image}}">
     <meta name="robots" content="index, follow">
     <!--[if lt IE 9]>
       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
@@ -41,7 +41,7 @@
           </header>
           {% if page.art == "Art" %}
           <figure>
-            <img src="../../images/no16/{{page.image}}" alt=""><figcaption>{{page.title}}</figcaption> 
+            <img src="../../images/no18/{{page.image}}" alt=""><figcaption>{{page.title}}</figcaption> 
           </figure>
           {% elsif page.art == "Poetry" %}
           <article class="poem">
@@ -74,6 +74,9 @@
       main.addEventListener('click', function() {
         drawer.classList.remove('open');
       });
+    </script>
+    <script>
+      document.getElementById("year").innerHTML = new Date().getFullYear();
     </script>
     <script>
       (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
