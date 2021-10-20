@@ -46,8 +46,9 @@
           {% elsif page.art == "Poetry" %}
           <article class="poem">
             <h3>{{page.title}}</h3>
-          </article>
-          {% elsif page.art == "Prose" %}
+          </article>  
+          {% endif %}
+          {% if page.art == "Prose" %}
           <article class="prose">
             <h3>{{page.title}}</h3>
           </article>
