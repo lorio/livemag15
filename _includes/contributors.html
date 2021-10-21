@@ -1,7 +1,9 @@
+{% assign contribs = site.data.artists | sort: 'name'  %}
+
 <nav id="drawer" class="side-nav">
   <h2><a href="../">#18</a></h2>
   <ul class="contributors">
-    {% for name in site.data.artists %}
+    {% for name in contribs %}
       <li><a href="../{{name.url}}/">{{name.artist}}</a></li>
     {% endfor %}
   </ul>
